@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe Game</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Tic Tac Toe Game</div>
+    </header>
+    <main class="main">
+        <div class="game">
+            <div class="message">Начнем игру!</div>
+            <div class="statistic">
+                <div class="player_score">
+                    <div class="player_score_header">
+                        <div class="player_score_icon">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                    </div>
+                    <div class="player_move">
+                        <div class="player_name">Игрок-X: </div>
+                        <div class="player_x_steps">0</div>
+                    </div>
+                    <div class="player_move">
+                        <div class="player_name">Игрок-O: </div>
+                        <div class="player_o_steps">0</div>
+                    </div>
+                </div>
+                <div class="btn game_results_btn"><i class="fas fa-info"></i></div>
+            </div>
+            <div class="game_cells">
+                <div class="game_cell"></div>
+                <div class="game_cell"></div>
+                <div class="game_cell"></div>
+                <div class="game_cell"></div>
+                <div class="game_cell"></div>
+                <div class="game_cell"></div>
+                <div class="game_cell"></div>
+                <div class="game_cell"></div>
+                <div class="game_cell"></div>
+                <div class="game_results hidden">
+                    <button class="results_close_btn"><i class="fas fa-times"></i></button>
+                    <div class="results_header">Результаты последних 10 игр:</div>
+                    <div class="game_stat"></div>
+                </div>
+            </div>
+            
+            <button class="btn reset_btn">Новая игра</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="left_footer"><p>2022,</p><a class="github_link" href="https://github.com/svetarachok">Author's Github</a></div>
+        <a class="rss_logo_link" href="https://rs.school/js-stage0/"><p class="rss_logo"></p></a>
+    </footer>
+   <script src="script.js"></script> 
+</body>
+</html>
