@@ -37,7 +37,7 @@ function currentStep() {
       this.classList.add("orange");
     }
     activeSteps();
-    messageText.textContent = `Ходит Игрок-${player}`;
+    messageText.textContent = `Player-${player} turn`;
     checkWinner();
   }
 }
@@ -105,10 +105,10 @@ function checkWinner() {
 
 function stopGame(result) {
   if (result === "") {
-    messageText.textContent = `Ничья!`;
+    messageText.textContent = `It's draw!`;
     addMusic('assets/draw.mp3')
   } else {
-    messageText.textContent = `Победил Игрок-${result}`;
+    messageText.textContent = `Winner is Player-${result}`;
     addMusic('assets/winner.mp3')
     gameCells.forEach((item) => item.removeEventListener("click", currentStep));
   }
@@ -122,7 +122,7 @@ function resetAll() {
     item.textContent = "";
     item.addEventListener("click", currentStep);
   });
-  messageText.textContent = `Ходит Игрок-X`;
+  messageText.textContent = `Player-X turn`;
   player = "X";
   winner = "";
   step = 0;
@@ -148,9 +148,9 @@ function showGameResults() {
   console.log(lastTenResults)
   for (let i = 0; i < lastTenResults.length; i++) {
     let res = document.createElement("div");
-    res.textContent = `Победил Игрок-${lastTenResults[i]}`;
+    res.textContent = `Winner is Player-${lastTenResults[i]}`;
     if (lastTenResults[i] === "") {
-      res.textContent = `Ничья!`;
+      res.textContent = `It's draw!`;
     }
     gameStat.append(res);
   }
